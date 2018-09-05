@@ -1,0 +1,4 @@
+org.springframework.context.ApplicationContextInitializer=\
+com.spider.dubbo.DubboConfigurationApplicationContextInitializer
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.spider.dubbo.DubboAutoConfiguration
