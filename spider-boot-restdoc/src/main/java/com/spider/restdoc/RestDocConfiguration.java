@@ -1,5 +1,6 @@
 package com.spider.restdoc;
 
+import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
@@ -26,6 +27,7 @@ import springfox.documentation.swagger2.configuration.Swagger2DocumentationConfi
 public class RestDocConfiguration {
 
     @Bean
+    @ConditionalOnMissingBean(name = "docket")
     public Docket docket(RestDocProperties properties) {
         ApiInfo apiInfo = new ApiInfoBuilder().title(properties.getApiTitle()).version(properties.getApiVersion()).build();
         return new Docket(DocumentationType.SWAGGER_2).apiInfo(apiInfo).select().apis(RequestHandlerSelectors.basePackage(properties.getBasePackage())).build();

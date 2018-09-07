@@ -3,6 +3,7 @@ package com.spider.redisson;
 import org.redisson.Redisson;
 import org.redisson.api.RedissonClient;
 import org.redisson.config.Config;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
@@ -21,6 +22,7 @@ import java.io.IOException;
 public class RedissonConfiguration {
 
     @Bean(destroyMethod = "shutdown")
+    @ConditionalOnMissingBean(name = "redissonClient")
     public RedissonClient redissonClient(RedissonProperties properties) throws IOException {
         return Redisson.create(Config.fromYAML(properties.getYamlFile().getInputStream()));
     }

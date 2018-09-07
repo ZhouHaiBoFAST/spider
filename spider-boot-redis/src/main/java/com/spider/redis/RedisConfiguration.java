@@ -1,6 +1,7 @@
 package com.spider.redis;
 
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
@@ -21,6 +22,7 @@ import redis.clients.jedis.JedisCluster;
 public class RedisConfiguration {
 
     @Bean(destroyMethod = "close")
+    @ConditionalOnMissingBean(name = "jedisCluster")
     public JedisCluster jedisCluster(RedisProperties properties) {
         return JedisClusterFactory.builder().redisProperties(properties).build();
     }

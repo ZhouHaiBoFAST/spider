@@ -2,6 +2,7 @@ package com.spider.elasticjob;
 
 import com.dangdang.ddframe.job.reg.zookeeper.ZookeeperConfiguration;
 import com.dangdang.ddframe.job.reg.zookeeper.ZookeeperRegistryCenter;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
@@ -18,6 +19,7 @@ import org.springframework.context.annotation.Configuration;
 public class ElasticJobConfiguration {
 
     @Bean(initMethod = "init", destroyMethod = "close")
+    @ConditionalOnMissingBean(name = "zookeeperRegistryCenter")
     public ZookeeperRegistryCenter zookeeperRegistryCenter(ElasticJobProperties properties) {
         ZookeeperConfiguration zookeeperConfiguration = new ZookeeperConfiguration(properties.getZookeeperServerLists(), properties.getZookeeperNamespace());
         zookeeperConfiguration.setBaseSleepTimeMilliseconds(properties.getZookeeperBaseSleepTimeMilliseconds());

@@ -19,7 +19,7 @@ import java.lang.reflect.Method;
  *
  * @author liuzhongkai
  */
-public class    ElasticJobSpiderBeanProcessor extends SpiderBeanProcessor {
+public class ElasticJobSpiderBeanProcessor extends SpiderBeanProcessor {
 
 
     private ZookeeperRegistryCenter zookeeperRegistryCenter;
