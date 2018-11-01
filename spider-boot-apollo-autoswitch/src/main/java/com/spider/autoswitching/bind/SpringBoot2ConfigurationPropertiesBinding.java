@@ -18,7 +18,7 @@ import java.util.function.Consumer;
  * spring boot 2.0 属性绑定
  *
  * @author liuzhongkai
- * @see org.springframework.boot.context.properties.ConfigurationPropertiesBinder
+ * @see org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor
  */
 public class SpringBoot2ConfigurationPropertiesBinding implements ConfigurationPropertiesBinding, ApplicationContextAware {
 

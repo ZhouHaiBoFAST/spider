@@ -3,9 +3,9 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <groupId>com.spider</groupId>
+        <groupId>com.github.liuzhongkai</groupId>
         <artifactId>spider-boot-common</artifactId>
-        <version>2.2.9-SNAPSHOT</version>
+        <version>2.3.1-RELEASE</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -24,7 +24,7 @@
             </exclusions>
         </dependency>
         <dependency>
-            <groupId>com.spider</groupId>
+            <groupId>com.github.liuzhongkai</groupId>
             <artifactId>spider-boot-zookeeper</artifactId>
         </dependency>
         <dependency>

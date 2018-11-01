@@ -4,15 +4,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>spider-boot-common</artifactId>
-        <groupId>com.spider</groupId>
-        <version>2.2.9-SNAPSHOT</version>
+        <groupId>com.github.liuzhongkai</groupId>
+        <version>2.3.1-RELEASE</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>spider-boot-apollo-autoswitch</artifactId>
-    <properties>
-        <spring.boot.version>2.0.3.RELEASE</spring.boot.version>
-    </properties>
 
     <dependencies>
         <dependency>
@@ -22,17 +19,14 @@
         </dependency>
 
         <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-core</artifactId>
-            <optional>true</optional>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot</artifactId>
         </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-autoconfigure</artifactId>
-            <optional>true</optional>
         </dependency>
-
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-context</artifactId>
@@ -46,7 +40,7 @@
         </dependency>
 
         <dependency>
-            <groupId>com.spider</groupId>
+            <groupId>com.github.liuzhongkai</groupId>
             <artifactId>spider-boot-bean</artifactId>
         </dependency>
 

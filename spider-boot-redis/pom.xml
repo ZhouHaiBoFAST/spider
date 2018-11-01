@@ -6,9 +6,9 @@
     <artifactId>spider-boot-redis</artifactId>
 
     <parent>
-        <groupId>com.spider</groupId>
+        <groupId>com.github.liuzhongkai</groupId>
         <artifactId>spider-boot-common</artifactId>
-        <version>2.2.9-SNAPSHOT</version>
+        <version>2.3.1-RELEASE</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
@@ -22,7 +22,7 @@
             <artifactId>jackson-databind</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.spider</groupId>
+            <groupId>com.github.liuzhongkai</groupId>
             <artifactId>spider-boot-bean</artifactId>
         </dependency>
         <dependency>

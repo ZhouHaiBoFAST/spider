@@ -19,6 +19,8 @@ import java.util.Collections;
 import java.util.Set;
 
 /**
+ * AutoSwitching 注册器由于扫描 {@link EnableAutoSwitching}
+ *
  * @author liuzhongkai
  */
 public class AutoSwitchingRegistrar implements ImportBeanDefinitionRegistrar {

@@ -46,7 +46,7 @@ public class JsonResult<T> implements Serializable {
     /**
      * 设置请求相应对象
      *
-     * @date 2017/8/7
+     * @param result 请求标注
      * @author liuzhongkai
      */
     public JsonResult(ResultInfo result) {
@@ -72,7 +72,7 @@ public class JsonResult<T> implements Serializable {
      *
      * @return 数据
      */
-    public Object getData() {
+    public T getData() {
         return this.data;
     }
 
@@ -81,6 +81,7 @@ public class JsonResult<T> implements Serializable {
      * 设置 数据
      *
      * @param data 数据
+     * @return 实例本身
      */
     public JsonResult<T> setData(final T data) {
         this.data = data;
@@ -110,6 +111,7 @@ public class JsonResult<T> implements Serializable {
      * 设置 请求相应
      *
      * @param result 相应
+     * @return 实例本身
      */
     public JsonResult<T> setBody(ResultInfo result) {
         this.msg = result.getMsg();
